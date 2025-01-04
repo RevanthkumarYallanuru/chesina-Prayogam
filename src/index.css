@@ -1,0 +1,485 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body
+{
+    background-color:#000;
+}
+
+
+/* From Uiverse.io by Erasmus001 */ 
+#wifi-loader {
+    --background: #62abff;
+    --front-color: #000;
+    --back-color: #c3c8de;
+    --text-color: #414856;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #wifi-loader svg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #wifi-loader svg circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(-100deg);
+    transform-origin: center;
+  }
+  
+  #wifi-loader svg circle.back {
+    stroke: var(--back-color);
+  }
+  
+  #wifi-loader svg circle.front {
+    stroke: var(--front-color);
+  }
+  
+  #wifi-loader svg.circle-outer {
+    height: 86px;
+    width: 86px;
+  }
+  
+  #wifi-loader svg.circle-outer circle {
+    stroke-dasharray: 62.75 188.25;
+  }
+  
+  #wifi-loader svg.circle-outer circle.back {
+    animation: circle-outer135 1.8s ease infinite 0.3s;
+  }
+  
+  #wifi-loader svg.circle-outer circle.front {
+    animation: circle-outer135 1.8s ease infinite 0.15s;
+  }
+  
+  #wifi-loader svg.circle-middle {
+    height: 60px;
+    width: 60px;
+  }
+  
+  #wifi-loader svg.circle-middle circle {
+    stroke-dasharray: 42.5 127.5;
+  }
+  
+  #wifi-loader svg.circle-middle circle.back {
+    animation: circle-middle6123 1.8s ease infinite 0.25s;
+  }
+  
+  #wifi-loader svg.circle-middle circle.front {
+    animation: circle-middle6123 1.8s ease infinite 0.1s;
+  }
+  
+  #wifi-loader svg.circle-inner {
+    height: 34px;
+    width: 34px;
+  }
+  
+  #wifi-loader svg.circle-inner circle {
+    stroke-dasharray: 22 66;
+  }
+  
+  #wifi-loader svg.circle-inner circle.back {
+    animation: circle-inner162 1.8s ease infinite 0.2s;
+  }
+  
+  #wifi-loader svg.circle-inner circle.front {
+    animation: circle-inner162 1.8s ease infinite 0.05s;
+  }
+  
+  #wifi-loader .text {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+  }
+  
+  #wifi-loader .text::before,
+  #wifi-loader .text::after {
+    content: attr(data-text);
+  }
+  
+  #wifi-loader .text::before {
+    color: var(--text-color);
+  }
+  
+  #wifi-loader .text::after {
+    color: var(--front-color);
+    animation: text-animation76 3.6s ease infinite;
+    position: absolute;
+    left: 0;
+  }
+  
+  @keyframes circle-outer135 {
+    0% {
+      stroke-dashoffset: 25;
+    }
+  
+    25% {
+      stroke-dashoffset: 0;
+    }
+  
+    65% {
+      stroke-dashoffset: 301;
+    }
+  
+    80% {
+      stroke-dashoffset: 276;
+    }
+  
+    100% {
+      stroke-dashoffset: 276;
+    }
+  }
+  
+  @keyframes circle-middle6123 {
+    0% {
+      stroke-dashoffset: 17;
+    }
+  
+    25% {
+      stroke-dashoffset: 0;
+    }
+  
+    65% {
+      stroke-dashoffset: 204;
+    }
+  
+    80% {
+      stroke-dashoffset: 187;
+    }
+  
+    100% {
+      stroke-dashoffset: 187;
+    }
+  }
+  
+  @keyframes circle-inner162 {
+    0% {
+      stroke-dashoffset: 9;
+    }
+  
+    25% {
+      stroke-dashoffset: 0;
+    }
+  
+    65% {
+      stroke-dashoffset: 106;
+    }
+  
+    80% {
+      stroke-dashoffset: 97;
+    }
+  
+    100% {
+      stroke-dashoffset: 97;
+    }
+  }
+  
+  @keyframes text-animation76 {
+    0% {
+      clip-path: inset(0 100% 0 0);
+    }
+  
+    50% {
+      clip-path: inset(0);
+    }
+  
+    100% {
+      clip-path: inset(0 0 0 100%);
+    }
+  }
+
+  .mobile
+  {
+    background-image: url('./assets/components/phone.svg');
+    background-position: center;
+    background-size: cover;
+    height: 280px;
+    width: 200px;
+    margin-left: 30px;
+    
+  }
+
+
+  .main{
+    background:#000;
+    height:300px;
+    width:300px;
+    margin:0 auto;
+  }
+  
+  .head{
+   background:#A4C939;
+    height:70px;
+    width:130px;
+    margin:0 auto;
+     border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    position:relative;
+    top:0px;
+  }
+  .htop{
+   background:#A4C939;
+    height:30px;
+    width:10px; 
+    position:relative;
+    top:15px;
+    left:26%;
+    margin:0px 30px;
+    display:inline-block;
+     border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+      transform-origin: 30% 30%;
+  }
+  
+  
+  .l-ear{
+    transform:rotate(-25deg);
+  
+   animation-duration: 2s;
+  /* animation-direction: alternate; */
+   animation-timing-function: ease-out;  
+    animation-iteration-count:infinite;
+   animation-delay: 2s; 
+    
+  }
+  
+  .r-ear{
+    transform:rotate(25deg);
+     
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: ease-out; 
+   animation-delay: 2s; 
+   
+  }
+  
+  
+  .eyes{
+   background:#000;
+    height:10px;
+    width:10px; 
+    border-radius:50%;
+    position:relative;
+    top:0%;
+    left:0%;
+    margin:35px 25px;
+    display:inline-block;
+  }
+  
+  
+  .dot{
+   background:#000;
+    height:5px;
+    width:5px; 
+    border-radius:50%;
+    position:relative;
+    margin:2px auto;
+    
+  
+  }
+  
+  .main:hover .dot{
+   
+      animation-name: blink;
+   animation-duration: 3s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease;  
+    animation-direction: alternate; 
+  }
+  
+  .main:hover .head{
+   
+      animation-name: up;
+   animation-duration: 3s;
+   animation-iteration-count: 1;
+   animation-timing-function: ease;  
+    animation-direction: alternate; 
+    transform-origin:80% 80%;
+  }
+  
+  
+  
+  
+  
+  .body{
+   background:#A4C939;
+    height:100px;
+    width:130px;
+    margin:0 auto;
+     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position:relative;
+    top:7px;
+  }
+  
+  .LHS{
+     background:#A4C939;
+    height:80px;
+    width:30px; 
+    margin: 0 auto;
+    position:relative;
+    right:50px;
+      margin:0px 16px;
+     border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display:inline-block;
+    
+    transform:rotate(0deg);
+    
+    transform-origin: 30% 0%;
+      animation-name: hand;
+   animation-duration: 2s;
+  
+   animation-timing-function: ease-out; 
+    animation-iteration-count:1;
+    
+     animation:handShake 2s ease alternate infinite;
+  }
+  .RHS{
+     background:#A4C939;
+    height:80px;
+    width:30px; 
+    margin: 0 auto;
+    position:relative;
+    left:52px;
+      margin:0px 16px;
+     border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display:inline-block;
+  }
+  
+  
+  .leg{
+   background:#A4C939;
+    height:60px;
+    width:30px; 
+    margin: 0 auto;
+    display:inline-block;
+    position:relative;
+      margin:0px 16px;
+     border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  .footer{
+   background:#000;
+    height:70px;
+    width:130px;
+    margin:0 auto;
+  }
+  
+  
+  @keyframes Earmove_L{
+    from{
+      transform:rotate(-25deg);
+    }
+    
+    to{
+       transform:rotate(-15deg);
+      
+    }
+    
+  }
+  
+  @keyframes Earmove_R{
+    from{
+      transform:rotate(25deg);
+    }
+    
+    to{
+       transform:rotate(15deg);
+      
+    }
+    
+  }
+  
+  
+  @keyframes hand{
+    0%{
+      transform:rotate(0deg);
+    }
+    
+    100%{
+       transform:rotate(160deg);
+      
+    }
+    
+  }
+  
+  @keyframes handShake{
+    0%{
+      transform:rotate(140deg);
+    }
+    
+    
+    100%{
+       transform:rotate(160deg);
+      
+    }
+    
+  }
+  
+  
+  
+  
+  @keyframes blink{
+   
+    0%{
+    margin:2px auto;
+    }
+    
+    100%{
+        margin:2px 5px;
+    
+    
+    }
+    
+  }
+  
+  
+  @keyframes up{
+   
+    0%{
+     transform:rotate(0deg);
+    }
+    
+    100%{
+  
+       transform:rotate(20deg);
+    
+    }
+    
+  }
+
+  .uiUx
+  {
+    position: relative;
+    top: -70px;
+    position: relative;
+    background-image: url(./assets/assets/uiuxframes.png);
+    background-size: cover;
+    height: 300px;
+    width: 250px;
+  }
