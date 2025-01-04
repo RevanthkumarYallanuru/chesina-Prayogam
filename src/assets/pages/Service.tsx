@@ -1,9 +1,9 @@
-import AppDev from "./AppDev"
-import Mvp from "./Mvp"
-import Seo from "./Seo"
-import Smedia from "./Smedia"
-import UiUx from "./UiUx"
-import Webdev from "./Webdev"
+import AppDev from "../components/AppDev"
+import Mvp from "../components/Mvp"
+import Seo from "../components/Seo"
+import Smedia from "../components/Smedia"
+import UiUx from "../components/UiUx"
+import Webdev from "../components/Webdev"
 
 const Service = () => {
   return (

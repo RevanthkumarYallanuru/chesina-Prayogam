@@ -1,4 +1,4 @@
-import Service from "./assets/components/Service"
+import Service from "./assets/pages/Service"
 
 
 const App = () => {
